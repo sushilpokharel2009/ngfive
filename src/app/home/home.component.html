@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="col">
+    <h3>Add list item</h3>
+  </div>
+  <div class="col">
+    <p>your bucket list ({{ iCount }})</p>
+  </div>
+<div>
+  <form action="">
+    <input type="text" class="txt" name="item" [(ngModel)]="gText">
+    <!-- <br><span>{{goalText}}</span> -->
+    <input type="submit" class="btn" (click)="addItems()">
+  </form>
+</div>
+<div>
+  <p class="lc" *ngFor="let g of goals; let i = index" (click) = "removeIt(i)">
+    Hello:{{g}}
+  </p>
+</div>
+</div>
